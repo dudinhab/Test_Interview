@@ -21,10 +21,16 @@ public class Solution4 {
         List arrayNewOrder = new ArrayList<>();
         int last = arrayNumber.size() - 1;
         int size = arrayNumber.size()/2;
+        boolean isEven = arrayNumber.size()%2==0;
+
         for (int i = 0; i < size; i++) {
             arrayNewOrder.add(arrayNumber.get(i));
             arrayNewOrder.add(arrayNumber.get(last - i));
         }
+        if (!isEven){
+            arrayNewOrder.add(arrayNumber.get(size));
+        }
+
         return arrayNewOrder;
     }
 }

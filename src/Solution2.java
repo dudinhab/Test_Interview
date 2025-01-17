@@ -24,8 +24,10 @@ public class Solution2 {
         while (!arrayNumber1.isEmpty()){
             arrayNewOrder.add(arrayNumber1.getFirst());
             arrayNumber1.removeFirst();
-            arrayNewOrder.add(arrayNumber1.getLast());
-            arrayNumber1.removeLast();
+            if (!arrayNumber1.isEmpty()) {
+                arrayNewOrder.add(arrayNumber1.getLast());
+                arrayNumber1.removeLast();
+            }
         }
         return arrayNewOrder;
     }

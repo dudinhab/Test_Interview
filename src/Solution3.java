@@ -18,12 +18,19 @@ public class Solution3 {
         List arrayNewOrder = new ArrayList<>();
         int last = arrayNumber.length - 1;
         int first = 0;
+        boolean isEven = arrayNumber.length%2==0;
+
         while (last > first) {
             arrayNewOrder.add(arrayNumber[first]);
             arrayNewOrder.add(arrayNumber[last]);
             first++;
             last--;
         }
+
+        if(!isEven){
+            arrayNewOrder.add(arrayNumber[last]);
+        }
+
         return arrayNewOrder;
     }
 
