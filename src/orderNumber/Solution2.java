@@ -1,3 +1,5 @@
+package orderNumber;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,10 +10,9 @@ public class Solution2 {
         List arrayNewOrder = orderNumber(arrayNumber);
 
         System.out.println("First array:");
-        System.out.println(arrayNumber);
-        System.out.println();
+        viewArray(arrayNumber);
         System.out.println("Ordered array:");
-        System.out.println(arrayNewOrder);
+        viewArray(arrayNewOrder);
     }
 
     //Metodo per ordinare di forma mesclata il primo e l'ultimo numero dell'array
@@ -30,5 +31,16 @@ public class Solution2 {
             }
         }
         return arrayNewOrder;
+    }
+    //Metodo per visualizzazione dei array
+    //Method for Array visualization
+    private static void viewArray(List arrayView) {
+        for (int i = 0; i < arrayView.size(); i++) {
+            if (i == arrayView.size() - 1) {
+                System.out.println(arrayView.get(i));
+            } else {
+                System.out.print(arrayView.get(i) + ", ");
+            }
+        }
     }
 }

@@ -1,3 +1,5 @@
+package orderNumber;
+
 public class Solution1 {
     public static void main(String[] args) {
         int[] arrayNumber = {14, 5, 23, 89, 4, 50};
