@@ -39,7 +39,7 @@ public class Solution1 {
     private static List extractedPrimeNumbers(int inputQuantityRound) {
         int quantityRound = 1;
         int testNumber;
-        int primeNumber = 1;
+        int primeNumber=2;
         boolean foundPrimeNumber = false;
         List primeNumberList = new ArrayList();
         while (inputQuantityRound >= quantityRound) {
@@ -53,7 +53,7 @@ public class Solution1 {
                     }
                 }
 
-                if (divisorNumbersList.size() <= 2) {
+                if (divisorNumbersList.size() == 2) {
                     foundPrimeNumber = true;
                     primeNumber = testNumber;
                 } else {
